@@ -1,0 +1,47 @@
+<ion-content scroll="false" class="loginPage">
+  <ion-card class="card">
+    <!-- <img src="img/nin-live.png" /> -->
+    <ion-card-content class="content">
+      <i class="iconfont icon-xiaofanggongcheng"></i>
+      <ion-card-title color="light" class="title">
+        消防工程九华MOA系统
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item class="item_input">
+    <ion-label color="primary">
+      <ion-icon name="person"></ion-icon>
+    </ion-label>
+    <ion-input type="text" placeholder="请输入用户名"></ion-input>
+  </ion-item>
+  <ion-item class="item_input">
+    <ion-label color="primary">
+      <ion-icon name="lock"></ion-icon>
+    </ion-label>
+    <ion-input type="password" placeholder="请输入密码"></ion-input>
+  </ion-item>
+  <ion-grid class="login_code">
+    <ion-row padding>
+      <ion-col col-9>
+        <ion-item class="item">
+            <ion-label color="primary">
+                <!-- <ion-icon name="lock"></ion-icon> -->
+                验证码
+              </ion-label>
+          <ion-input type="text" placeholder="请输入验证码"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3 (click)="createCode()">
+        <div class="code">{{Code}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item class="item_checkbox" color="primary">
+    <ion-label>记住密码</ion-label>
+    <ion-checkbox color="mybase" solid></ion-checkbox>
+  </ion-item>
+
+  <button ion-button round class="login_but" (click)="butLogin()">登录</button>
+</ion-content>
